@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">GICUITest</string>
+
+    <string name="signup_success">SignUp Successfull</string>
+    <string name="signup_failed">SignUp Unsuccessfull</string>
+    <string name="signin_success"></string>
+    <string name="signin_failed"></string>
+
+    <string name="emptyErrorString">Your name can not be empty</string>
+    <string name="testErrorString">Your name is ugly</string>
+    <string name="emailnotvalid">Email not valid</string>
+
+</resources>
