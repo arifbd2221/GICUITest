@@ -23,9 +23,8 @@ public class SignUpActivity extends AppCompatActivity {
 
 
     Toolbar toolbar;
-    FormEditText email,name;
+    FormEditText email,name,phone,password;
 
-    EditText phone,password;
 
     Button signin,signup;
 
@@ -48,7 +47,7 @@ public class SignUpActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         email = findViewById(R.id.email);
-        phone = (EditText)findViewById(R.id.phone);
+        phone = findViewById(R.id.phone);
         name = findViewById(R.id.name);
         password = findViewById(R.id.password);
 
@@ -62,7 +61,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                 hideKeyboard();
 
-                FormEditText[] allFields = {name,email};
+                FormEditText[] allFields = {name,email,phone,password};
 
                 boolean allValid  = true;
 
@@ -73,10 +72,18 @@ public class SignUpActivity extends AppCompatActivity {
                 if (allValid){
                     User user = new User(name.getText().toString(),email.getText().toString(),phone.getText().toString(),password.getText().toString());
 
-                    if(database.insertUser(user) > 0)
+                    if(database.insertUser(user) > 0){
+                        name.setText("");
+                        email.setText("");
+                        phone.setText("");
+                        password.setText("");
                         print("SignUp Successfull");
+                    }
+
                     else
                         print("SignUp Unsuccessfull");
+
+
                 }
 
 

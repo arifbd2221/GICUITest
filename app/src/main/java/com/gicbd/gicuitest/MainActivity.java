@@ -71,8 +71,12 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 try{
-                    if (db.getUserPasswordByName(nameString).equals(passString))
+                    if (db.getUserPasswordByName(nameString).equals(passString)){
+                        name.setText("");
+                        password.setText("");
                         print("Sign In Success");
+                    }
+
 
                     else
                         print("Sign In UnSuccess");

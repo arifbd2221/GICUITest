@@ -51,11 +51,6 @@
             android:gravity="center"
             android:background="@drawable/layout_background">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/giclogo2"
-                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -70,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:drawablePadding="10dp"
                     android:id="@+id/name"
-                    android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+                    android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginStart="20dp"
                     android:hint="NAME"
@@ -101,7 +96,7 @@
                     android:layout_marginTop="70dp"
                     android:layout_marginEnd="25dp"
                     android:id="@+id/signin"
-                    android:background="@drawable/button_background"
+                    android:background="@drawable/button_background2"
                     android:text="SIGN IN"
                     android:textColor="@android:color/white"
                     android:layout_marginRight="25dp" />
